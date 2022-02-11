@@ -26,10 +26,10 @@ section{
 
 .row{
     width: 80vw;
-    height: 50vh;
 }
 
 .item{
+    height: 50vh;
     position: relative;
     /* display: none; */
 }
@@ -53,16 +53,31 @@ section{
 }
 
 .control-wrapper{
-    height: (50vh / 6);
+    height: calc(50vh / 6);
+    position: relative;
 }
 
+.control-wrapper::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0 , 0, 0.4);
+}
+
+.control-wrapper.active::after{
+    display: none;
+}
 
 .next, .prev{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
-    color: #333;
+    color: rgb(88, 88, 88);
     z-index: 10;
 }
 
@@ -73,3 +88,4 @@ section{
 .prev{
     top: 0;
 }
+
