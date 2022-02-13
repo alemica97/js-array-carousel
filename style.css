@@ -26,26 +26,41 @@ section{
 
 .row{
     width: 80vw;
+    border-radius: 20px;
+    border: 5px solid #333;
+    overflow: hidden;
 }
 
 .item{
     height: 50vh;
     position: relative;
-    /* display: none; */
+    display: none;
 }
 
 .item.active{
     display: block;
 }
 
-.description{
+.title{
     color: white;
     font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    text-shadow: 1px 2px rgb(29, 28, 28, 0.6);
+}
+
+.description{
+    color: white;
+    font-size: 12px;
     font-weight: 500;
     position: absolute;
     bottom: 20px;
     right: 20px;
     text-shadow: 1px 2px rgb(29, 28, 28, 0.6);
+    text-align: right;
+    padding-left: 20px;
 }
 
 .controls{
@@ -77,8 +92,14 @@ section{
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
-    color: rgb(88, 88, 88);
+    color: rgb(182, 182, 182);
     z-index: 10;
+}
+.next:hover, 
+.prev:hover{
+    cursor: pointer;
+    transform: translateX(-50%) scale(1.2 , 1.2);
+    transition: 300ms;
 }
 
 .next{
