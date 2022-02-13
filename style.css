@@ -83,6 +83,7 @@ section{
 
 .controls{
     position: relative;
+    border-left: 2px solid #444;
 }
 
 .control-wrapper{
